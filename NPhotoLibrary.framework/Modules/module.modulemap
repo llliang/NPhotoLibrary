@@ -1,0 +1,11 @@
+framework module NPhotoLibrary {
+  umbrella header "NPhotoLibrary.h"
+
+  export *
+  module * { export * }
+}
+
+module NPhotoLibrary.Swift {
+    header "NPhotoLibrary-Swift.h"
+    requires objc
+}
