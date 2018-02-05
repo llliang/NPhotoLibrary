@@ -1,7 +1,6 @@
 # NPhotoLibrary
 
-#
-# sample
+## example
 ```
 NPhotoPrivacyAuthorizationManager.requestAuthorization { (type, state) -> (Void) in
             if type == NPhotoPrivacyAuthorizationManager.PrivacyType.library && state == NPhotoPrivacyAuthorizationManager.AuthorizationStatus.authorized {
