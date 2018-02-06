@@ -57,7 +57,7 @@ public class NPhotoPrivacyAuthorizationManager: NSObject {
     class func requestCameraAuthorization(authorization: @escaping AuthorizationResult) {
         let state = manager.getCameraState()
         if state == .notDetermined {
-            AVCaptureDevice.requestAccess(for: .video, completionHandler: { allowed in
+            AVCaptureDevice.requestAccess(for: .video, completionHandler: { (allowed: Bool) in
                 DispatchQueue.main.async {
                     if allowed {
                         authorization(PrivacyType.camera, AuthorizationStatus.authorized)
