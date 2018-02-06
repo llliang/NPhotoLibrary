@@ -78,7 +78,7 @@ public class NPhotoPrivacyAuthorizationManager: NSObject {
     }
     
     // MARK: -------- private method
-    
+     
     /// photo library
     private func getPhotoLibraryState() -> AuthorizationStatus {
         let state = PHPhotoLibrary.authorizationStatus()
