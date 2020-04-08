@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "NPhotoLibrary"
   spec.version      = "0.0.2"
-  spec.summary      = "A short description of NPhotoLibrary."
+  spec.summary      = "Nest sub repo"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,6 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+  										Nest sub repo
                    DESC
 
   spec.homepage     = "http://EXAMPLE/NPhotoLibrary"
@@ -38,7 +39,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
+  spec.license      = "MIT"
   # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -67,7 +68,7 @@ Pod::Spec.new do |spec|
   # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-  # spec.ios.deployment_target = "5.0"
+  spec.ios.deployment_target = "10.0"
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
@@ -79,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/NPhotoLibrary.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "git@github.com:llliang/NPhotoLibrary.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,8 +91,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "NPhotoLibrary", "NPhotoLibrary/*.{swift}"
-  spec.exclude_files = "NPhotoLibrary"
+  spec.source_files  = "NPhotoLibrary/*.swift"
+  # spec.exclude_files = "NPhotoLibrary"
 
   # spec.public_header_files = "Classes/**/*.h"
 
