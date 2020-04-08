@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
   										Nest sub repo
                    DESC
 
-  spec.homepage     = "http://EXAMPLE/NPhotoLibrary"
+  spec.homepage     = "https://github.com/llliang/NPhotoLibrary.git"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "git@github.com:llliang/NPhotoLibrary.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/llliang/NPhotoLibrary.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
