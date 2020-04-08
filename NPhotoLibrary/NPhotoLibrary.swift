@@ -11,7 +11,7 @@ import UIKit
 import Photos
 
 // MARK:
-public class NPhotoPrivacyAuthorizationManager: NSObject {
+open class NPhotoPrivacyAuthorizationManager: NSObject {
     static let manager = NPhotoPrivacyAuthorizationManager()
     
     @objc public enum PrivacyType: Int {
@@ -126,7 +126,7 @@ let collectionViewItemWidth = (UIScreen.main.bounds.size.width - CGFloat((number
 
 typealias SelectedImagesCallback = (Array<UIImage>) -> Void
 
-public class NPhotoPickerViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PHPhotoLibraryChangeObserver {
+open class NPhotoPickerViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PHPhotoLibraryChangeObserver {
     
     /// permissible maximum number of selected
     public var maxCount: Int = 0
@@ -182,7 +182,7 @@ public class NPhotoPickerViewController: UIViewController, UICollectionViewDataS
     
     var fetchResult: PHFetchResult<PHAsset>?
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.layoutSubviews()
@@ -191,7 +191,7 @@ public class NPhotoPickerViewController: UIViewController, UICollectionViewDataS
         PHPhotoLibrary.shared().register(self)
     }
     
-    override public func viewWillAppear(_ animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         isPushed = self.isMovingToParentViewController
         navigationView?.leftButton?.setTitle(leftNavigationItemTitle, for: .normal)
@@ -202,13 +202,13 @@ public class NPhotoPickerViewController: UIViewController, UICollectionViewDataS
         }
     }
     
-    override public func viewWillDisappear(_ animated: Bool) {
+    override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBar.isHidden = false
     }
     
     @available(iOS 11.0, *)
-    override public func viewSafeAreaInsetsDidChange() {
+    override open func viewSafeAreaInsetsDidChange() {
         super.viewSafeAreaInsetsDidChange()
         navigationView?.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.safeAreaInsets.top + 44)
         navigationView?.contentView?.frame = CGRect(x: 0, y: self.view.safeAreaInsets.top, width: self.view.frame.size.width, height: 44)
